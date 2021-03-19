@@ -15,4 +15,4 @@ Run hello world test:
       - logs
     # attach xunit report to merge requests
     reports:
-      junit: output/xunit.xml
+      junit: logs/xunit.xml
