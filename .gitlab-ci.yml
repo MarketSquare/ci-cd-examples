@@ -1,0 +1,6 @@
+# Example how to execute Robot Framework Test or Tasks in GitLab CI/CD
+test:
+  image: marketsquare/robotframework-browser
+  stage: test
+  script:
+    - robot hello_world.robot
