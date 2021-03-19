@@ -1,6 +1,18 @@
 # Example how to execute Robot Framework Test or Tasks in GitLab CI/CD
-test:
+# ++++++++++++++++++++++
+# Run test job inside robotframework-browser environment and archive reports and results
+
+Run hello world test:
   image: marketsquare/robotframework-browser
   stage: test
   script:
-    - robot hello_world.robot
+    - robot -x xunit.xml -d logs -b console.log hello_world.robot
+  artifacts:
+    when: always
+    expire_in: 1 week
+    # archive report.html and log.html from logs folder
+    paths:
+      - logs
+    # attach xunit report to merge requests
+    reports:
+      junit: output/xunit.xml
