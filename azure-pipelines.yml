@@ -1,8 +1,6 @@
+pool:
+  vmImage: 'ubuntu-18.04'
+  container: marketsquare/robotframework-browser
 name: Run hello world test
-resources:
-  containers:
-  - container: Robot_container
-    image: marketsquare/robotframework-browser
 steps:
   - script: "robot -x xunit.xml -d logs -b console.log hello_world.robot"
-
