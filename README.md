@@ -1,5 +1,6 @@
-# Examples how to execute Robot Framework tests or tasks in CI CD
-## CI / CD services
+# CI / CD examples with Robot Framework
+
+This repository contains example pipelines executing Robot Framework tests.
 
 | CI/CD | Status | Pipeline File |
 | ---- | ---- | ---- |
